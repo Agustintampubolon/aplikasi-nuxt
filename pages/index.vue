@@ -14,25 +14,6 @@
             v-model="searchQuery"
           />
 
-          <select
-            name="Category"
-            class="form-control"
-            placeholder="Pilih Kategori"
-            v-model="selected"
-            :tasks="tasks"
-          >
-            <option :value="null" selected>-- Select Category --</option>
-            <option v-bind:value="tasks[0].category">
-              <span> {{ tasks[0].category }} </span>
-            </option>
-            <option v-bind:value="tasks[1].category">
-              <span> {{ tasks[1].category }} </span>
-            </option>
-            <option v-bind:value="tasks[2].category">
-              <span> {{ tasks[2].category }} </span>
-            </option>
-          </select>
-
           <div class="d-flex align-items-center">
             <span class="me-2">View As &nbsp;</span>
             <button
@@ -73,7 +54,7 @@ export default {
 
       isGrid: false,
 
-      selected: null,
+      isHidden: false,
 
       tasks: [
         {
@@ -81,36 +62,42 @@ export default {
           description: "Lemper Enak",
           isDone: false,
           category: "Makanan",
+          isHidden: false,
         },
         {
           title: "Teh Bohai",
           description: "Teh Bohai Seger",
           isDone: false,
           category: "Minuman",
+          isHidden: false,
         },
         {
           title: "Mintz",
           description: "Mintz Seger",
           isDone: false,
           category: "Permen",
+          isHidden: false,
         },
         {
           title: "Jagung",
           description: "Jagung Di Bakar",
           isDone: false,
           category: "Makanan",
+          isHidden: false,
         },
         {
           title: "Cincau",
           description: "Cincau Bikin Lengket",
           isDone: false,
           category: "Minuman",
+          isHidden: false,
         },
         {
           title: "Kopiko",
           description: "Kopiko Adem",
           isDone: false,
           category: "Permen",
+          isHidden: false,
         },
       ],
     };
